@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --band: min(calc(100vw - 220px), 2346px);
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -13,14 +17,5 @@
 
   ::selection {
     @apply bg-cloud text-ebony;
-  }
-}
-
-@layer utilities {
-  @media (min-width: 1024px) {
-    .responsive-scale {
-      width: 1700px;
-      zoom: clamp(0.47, calc((100vw - 220px) / 1700), 1.38);
-    }
   }
 }
