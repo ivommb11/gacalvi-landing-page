@@ -17,7 +17,7 @@ export function Header() {
           className="flex items-center gap-[12px]"
           onClick={() => setOpen(false)}
         >
-          <span className="flex size-[36px] items-center justify-center rounded-2 bg-cloud">
+          <span className="flex size-[36px] items-center justify-center rounded-2">
             <img src={gacalviLogo} alt="Corporación Gacalvi" className="w-[36px] h-auto object-contain" />
           </span>
           <span className="font-black uppercase leading-[15.81px] tracking-1.73 text-white">
