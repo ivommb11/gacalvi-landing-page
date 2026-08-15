@@ -2,7 +2,8 @@ import { useState } from 'react'
 
 import { FOOTER_NAV, SECTION_IDS } from '../../lib/site'
 import { useActiveSection } from '../../hooks/useActiveSection'
-import { IconClose, IconLogoMark, IconMenu } from '../icons'
+import gacalviLogo from '../../assets/photos/logo.png'
+import { IconClose, IconMenu } from '../icons'
 
 export function Header() {
   const [open, setOpen] = useState(false)
@@ -17,7 +18,7 @@ export function Header() {
           onClick={() => setOpen(false)}
         >
           <span className="flex size-[36px] items-center justify-center rounded-2 bg-cloud">
-            <IconLogoMark className="size-[18px]" />
+            <img src={gacalviLogo} alt="Corporación Gacalvi" className="w-[36px] h-auto object-contain" />
           </span>
           <span className="font-black uppercase leading-[15.81px] tracking-1.73 text-white">
             <span className="block text-11.5">Corporación</span>
