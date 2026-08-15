@@ -15,3 +15,12 @@
     @apply bg-cloud text-ebony;
   }
 }
+
+@layer utilities {
+  @media (min-width: 1024px) {
+    .responsive-scale {
+      width: 1700px;
+      zoom: clamp(0.47, calc((100vw - 220px) / 1700), 1.38);
+    }
+  }
+}

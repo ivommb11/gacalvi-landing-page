@@ -62,7 +62,7 @@ export function SobreNosotros() {
       />
       <div aria-hidden className="absolute inset-0 bg-ebony-43" />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-[1700px] flex-1 flex-col px-6 pt-[96px] lg:px-0 lg:pt-[97px]">
+      <div className="relative z-10 mx-auto flex w-full flex-1 flex-col px-6 pt-[96px] lg:px-0 lg:pt-[97px] lg:responsive-scale">
         <motion.h2
           variants={textVariants}
           initial="hidden"
