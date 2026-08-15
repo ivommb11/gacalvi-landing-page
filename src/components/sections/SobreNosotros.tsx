@@ -28,7 +28,7 @@ function StatItem({ value, lines }: Stat) {
         <IconEllipse className="absolute inset-0 size-full" />
         <span className="relative text-[clamp(16px,calc(var(--band)*0.0141176471),33.12px)] font-black text-ebony">{value}</span>
       </span>
-      <span className="max-w-[clamp(64px,calc(var(--band)*0.0564705882),132.48px)] text-[clamp(8.5px,calc(var(--band)*0.0058823529),13.8px)] font-bold uppercase leading-[clamp(12px,calc(var(--band)*0.0083823529),19.665px)] tracking-[clamp(1.4px,calc(var(--band)*0.0011176471),2.622px)] text-white">
+      <span className="max-w-[clamp(84px,calc(var(--band)*0.0564705882),132.48px)] text-[clamp(8.5px,calc(var(--band)*0.0058823529),13.8px)] font-bold uppercase leading-[clamp(12px,calc(var(--band)*0.0083823529),19.665px)] tracking-[clamp(1.4px,calc(var(--band)*0.0011176471),2.622px)] text-white">
         <span className="block">{lines[0]}</span>
         <span className="block">{lines[1]}</span>
       </span>
@@ -110,7 +110,7 @@ export function SobreNosotros() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.3 }}
-          className="mt-[clamp(32px,calc(var(--band)*0.0282352941),66.24px)] flex flex-col gap-[clamp(16px,calc(var(--band)*0.0141176471),33.12px)] pb-[clamp(36px,calc(var(--band)*0.0329411765),77.28px)] sm:flex-row sm:items-end lg:mt-auto lg:justify-end lg:gap-[calc(var(--band)*0.0541176471)] lg:pb-[calc(var(--band)*0.0705882353)] lg:pr-[calc(var(--band)*0.0852941176)]"
+          className="mt-[clamp(32px,calc(var(--band)*0.0282352941),66.24px)] flex flex-col gap-[clamp(16px,calc(var(--band)*0.0141176471),33.12px)] pb-[clamp(36px,calc(var(--band)*0.0329411765),77.28px)] sm:flex-row sm:items-end lg:mt-auto lg:gap-[calc(var(--band)*0.0541176471)] lg:pb-[calc(var(--band)*0.0705882353)] min-[1920px]:justify-end min-[1920px]:pr-[calc(var(--band)*0.0852941176)] lg:max-[1919px]:pl-[calc(var(--band)*0.6488235294)]"
         >
           {STATS.map((stat) => (
             <motion.div key={stat.value} variants={statItemVariants}>
