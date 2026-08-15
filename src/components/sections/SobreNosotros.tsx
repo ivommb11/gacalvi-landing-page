@@ -80,7 +80,7 @@ export function SobreNosotros() {
           whileInView="visible"
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
-          className="mt-[clamp(16px,calc(var(--band)*0.0141176471),33.12px)] w-full text-[clamp(12px,calc(var(--band)*0.0079411765),18.63px)] font-regular leading-[clamp(20px,calc(var(--band)*0.0164705882),38.64px)] text-white lg:ml-auto lg:mr-[calc(var(--band)*0.0541176471)] lg:w-[calc(var(--band)*0.2970588235)]"
+          className="mt-[clamp(16px,calc(var(--band)*0.0141176471),33.12px)] w-full text-[clamp(12px,calc(var(--band)*0.0079411765),18.63px)] font-regular leading-[clamp(20px,calc(var(--band)*0.0164705882),38.64px)] text-white lg:ml-auto lg:mr-[calc(var(--band)*0.0541176471)] lg:w-[calc(var(--band)*0.2970588235)] lg:mb-[clamp(48px,calc(var(--band)*0.0352941176),77.28px)]"
         >
             <p>
               <span className="font-extrabold">Corporación Gacalvi </span>
@@ -110,7 +110,7 @@ export function SobreNosotros() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.3 }}
-          className="mt-[clamp(32px,calc(var(--band)*0.0282352941),66.24px)] flex flex-col gap-[clamp(16px,calc(var(--band)*0.0141176471),33.12px)] pb-[clamp(36px,calc(var(--band)*0.0329411765),77.28px)] sm:flex-row sm:items-end lg:mt-auto lg:gap-[calc(var(--band)*0.0541176471)] lg:pb-[calc(var(--band)*0.0705882353)] min-[1920px]:justify-end min-[1920px]:pr-[calc(var(--band)*0.0852941176)] lg:max-[1919px]:pl-[calc(var(--band)*0.6488235294)]"
+          className="mt-[clamp(48px,calc(var(--band)*0.0282352941),66.24px)] flex flex-col gap-[clamp(16px,calc(var(--band)*0.0141176471),33.12px)] pb-[clamp(36px,calc(var(--band)*0.0329411765),77.28px)] sm:flex-row sm:items-end lg:mt-auto lg:gap-[calc(var(--band)*0.0541176471)] lg:pb-[calc(var(--band)*0.0705882353)] lg:pl-[calc(var(--band)*0.6488235294)]"
         >
           {STATS.map((stat) => (
             <motion.div key={stat.value} variants={statItemVariants}>
