@@ -110,7 +110,7 @@ export function SobreNosotros() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.3 }}
-          className="mt-[clamp(48px,calc(var(--band)*0.0282352941),66.24px)] flex flex-col gap-[clamp(16px,calc(var(--band)*0.0141176471),33.12px)] pb-[clamp(36px,calc(var(--band)*0.0329411765),77.28px)] sm:flex-row sm:items-end lg:mt-auto lg:gap-[calc(var(--band)*0.0541176471)] lg:pb-[calc(var(--band)*0.0705882353)] lg:pl-[calc(var(--band)*0.6488235294)]"
+          className="mt-[clamp(48px,calc(var(--band)*0.0282352941),66.24px)] flex flex-col gap-[clamp(16px,calc(var(--band)*0.0141176471),33.12px)] pb-[clamp(36px,calc(var(--band)*0.0329411765),77.28px)] sm:flex-row sm:items-end lg:mt-auto lg:gap-[calc(var(--band)*0.0541176471)] lg:pb-[calc(var(--band)*0.0705882353)] lg:pl-[calc(100%_-_var(--band)*0.3511764706)]"
         >
           {STATS.map((stat) => (
             <motion.div key={stat.value} variants={statItemVariants}>
