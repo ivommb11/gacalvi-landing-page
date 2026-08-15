@@ -19,6 +19,8 @@ export function Carousel<T>({ items, renderItem, label, className }: CarouselPro
   const viewportRef = useRef<HTMLDivElement>(null)
   const trackRef = useRef<HTMLDivElement>(null)
   const x = useMotionValue(0)
+  const abs = useMotionValue(0)
+  const dragging = useRef(false)
   const [itemWidth, setItemWidth] = useState(0)
   const [setSize, setSetSize] = useState(0)
   const [centerOffset, setCenterOffset] = useState(0)
@@ -42,6 +44,7 @@ export function Carousel<T>({ items, renderItem, label, className }: CarouselPro
       setSetSize(sw)
       setCenterOffset(off)
       x.set(off)
+      abs.set(off)
     }
 
     measure()
@@ -53,18 +56,15 @@ export function Carousel<T>({ items, renderItem, label, className }: CarouselPro
     return () => {
       observer.disconnect()
     }
-  }, [items, x])
+  }, [items, x, abs])
 
   useAnimationFrame(() => {
-    if (!setSize) return
-    const min = centerOffset - setSize
-    const max = centerOffset
-    const value = x.get()
-    if (value < min || value > max) {
-      const wrapped =
-        ((value - centerOffset) % setSize + setSize) % setSize - setSize + centerOffset
-      x.set(wrapped)
-    }
+    if (!setSize || dragging.current) return
+    const value = abs.get()
+    const u = value - centerOffset
+    const w = u - setSize * Math.floor(u / setSize)
+    const target = w === 0 ? centerOffset : centerOffset - setSize + w
+    if (target !== x.get()) x.set(target)
   })
 
   useMotionValueEvent(x, 'change', (latest) => {
@@ -77,11 +77,11 @@ export function Carousel<T>({ items, renderItem, label, className }: CarouselPro
   const snapToIndex = (index: number) => {
     if (!itemWidth || !setSize) return
     const targetBase = centerOffset - index * itemWidth
-    const value = x.get()
+    const value = abs.get()
     let target = targetBase
     while (target - value > setSize / 2) target -= setSize
     while (value - target > setSize / 2) target += setSize
-    animate(x, target, { type: 'spring', stiffness: 300, damping: 34 })
+    animate(abs, target, { type: 'spring', stiffness: 300, damping: 34 })
   }
 
   const moveByItems = (direction: -1 | 1) => {
@@ -103,7 +103,14 @@ export function Carousel<T>({ items, renderItem, label, className }: CarouselPro
           ref={trackRef}
           style={{ x }}
           drag="x"
-          onDragEnd={snapToNearest}
+          onDragStart={() => {
+            dragging.current = true
+          }}
+          onDrag={() => abs.set(x.get())}
+          onDragEnd={() => {
+            dragging.current = false
+            snapToNearest()
+          }}
           className="flex select-none"
         >
           {slides.map((item, index) => (
