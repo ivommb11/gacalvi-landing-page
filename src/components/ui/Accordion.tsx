@@ -22,7 +22,7 @@ const itemVariants: Variants = {
 
 function LogoSlot({ logo, title }: { logo?: string; title: string }) {
   if (logo) {
-    return <img src={logo} alt={title} className="size-[300px] shrink-0 object-contain" />
+    return <img src={logo} alt={title} className="size-[300px] shrink-0 object-contain sm:size-[clamp(140px,35%,300px)]" />
   }
   return (
     <span className="flex size-[88px] shrink-0 items-center justify-center rounded-2 border border-cloud-16 bg-white-8 text-12.5 font-bold uppercase tracking-1.9 text-cloud">
