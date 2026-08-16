@@ -152,7 +152,7 @@ export function Menciones() {
               tabIndex={-1}
               layoutId={`mention-card-${selected.id}`}
               transition={{ layout: layoutSpring }}
-              className="relative flex max-h-[88vh] w-full max-w-[720px] flex-col overflow-hidden bg-white shadow-fab outline-none"
+              className="relative flex max-h-[88vh] w-full flex-col overflow-hidden bg-white shadow-fab outline-none md:h-[80vh] md:max-w-[1100px] md:flex-row"
             >
               <button
                 type="button"
@@ -163,13 +163,15 @@ export function Menciones() {
                 <IconClose width={14} height={14} />
               </button>
 
-              <motion.img
-                src={selected.src}
-                alt={selected.alt}
-                layoutId={`mention-image-${selected.id}`}
-                transition={{ layout: layoutSpring }}
-                className="h-[260px] w-full shrink-0 object-cover"
-              />
+              <div className="h-[280px] w-full shrink-0 bg-white md:h-auto md:w-[46%] md:self-stretch md:pl-6 lg:pl-[40px]">
+                <motion.img
+                  src={selected.src}
+                  alt={selected.alt}
+                  layoutId={`mention-image-${selected.id}`}
+                  transition={{ layout: layoutSpring }}
+                  className="h-full w-full object-contain"
+                />
+              </div>
 
               <motion.div
                 initial={{ opacity: 0, y: 16 }}
