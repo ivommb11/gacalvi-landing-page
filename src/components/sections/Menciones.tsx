@@ -163,7 +163,7 @@ export function Menciones() {
                 <IconClose width={14} height={14} />
               </button>
 
-              <div className="h-[280px] w-full shrink-0 bg-white md:h-auto md:w-[46%] md:self-stretch md:pl-6 lg:pl-[40px]">
+              <div className="h-[280px] w-full shrink-0 bg-white py-6 md:h-auto md:w-[46%] md:self-stretch md:pl-6 lg:pl-[40px]">
                 <motion.img
                   src={selected.src}
                   alt={selected.alt}
