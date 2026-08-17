@@ -50,7 +50,7 @@ export function Footer() {
       className="relative bg-ebony"
     >
       <div className="mx-auto w-full max-w-[1700px] px-6 pt-[80px] xl:pl-[145px]">
-        <div className="grid grid-cols-1 gap-x-10 gap-y-12 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="grid grid-cols-1 gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-4">
           <div className="max-w-[294px]">
             <div className="flex items-center gap-[12px]">
               <span className="flex size-[36px] shrink-0 items-center justify-center rounded-2 ">
