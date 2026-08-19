@@ -62,8 +62,7 @@ export function Footer() {
             </div>
             {/*<span aria-hidden className="mt-[17px] block h-[1.5px] w-[42px] bg-cloud" />*/}
             <p className="mt-[25px] text-12.5 font-regular text-white-38">
-              Firma de arquitectura e ingeniería comprometida con la excelencia, la innovación y el
-              impacto positivo en el entorno construido peruano.
+              Tu visión, nuestra experiencia. Diseñamos el futuro del Perú uniendo la ingeniería, la arquitectura y la innovación, construyendo relaciones de absoluta confianza y un impacto real en cada proyecto.
             </p>
           </div>
 
