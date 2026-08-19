@@ -43,7 +43,7 @@ export const CONTACT_INFO = {
 } as const
 
 const INSTAGRAM_BASE = 'https://www.instagram.com/'
-
+const FACEBOOK_BASE = 'https://www.facebook.com/'
 export const SOCIAL_HANDLES: readonly { handle: string; href: string }[] = [
   { handle: 'studiodesign.gacalvi', href: `${INSTAGRAM_BASE}studiodesign.gacalvi` },
   { handle: 'trainingcenter.gacalvi', href: `${INSTAGRAM_BASE}trainingcenter.gacalvi` },
@@ -51,9 +51,9 @@ export const SOCIAL_HANDLES: readonly { handle: string; href: string }[] = [
 ]
 
 export const SOCIAL_BRANDS: readonly { name: string; href: string }[] = [
-  { name: 'Constructora Gacalvi', href: `${INSTAGRAM_BASE}constructora.gacalvi` },
-  { name: 'Gacalvi Studio Design', href: `${INSTAGRAM_BASE}studiodesign.gacalvi` },
-  { name: 'Gacalvi Training Center', href: `${INSTAGRAM_BASE}trainingcenter.gacalvi` },
+  { name: 'Constructora Gacalvi', href: `${FACEBOOK_BASE}profile.php?id=100063643509708` },
+  { name: 'Gacalvi Studio Design', href: `${FACEBOOK_BASE}profile.php?id=100077465508259` },
+  { name: 'Gacalvi Training Center', href: `${FACEBOOK_BASE}trainingcenter.gacalvi` },
 ]
 
 export const TESTIMONIALS: readonly Testimonial[] = [
@@ -96,11 +96,15 @@ export const MENTIONS: readonly MentionCard[] = [
     alt: 'Edificio moderno premiado',
     title: 'Reinventado la construcción de las edificaciones',
     category: 'Evento',
-    date: 'Julio 2026',
+    date: '',
     description:
-      'El Ing. Gabriel Calderón Vivar, miembro de Gacalvi, participo como expositor de la conferencia “Reinventando la construcción de las edificaciones”, organizada por la revista CONSTRUCTIVO y ExpoCONSTRUCTIVO. La participación del ingeniero Calderón giró en torno a los bloques de concreto: ventajas, uso y respuesta del personal de obra.',
+      '',
     fullText:
-      'Texto completo de la noticia — pendiente por definir. El Ing. Gabriel Calderón Vivar participó como expositor en la conferencia “Reinventando la construcción de las edificaciones”, organizada por la revista CONSTRUCTIVO y ExpoCONSTRUCTIVO, donde expuso sobre los bloques de concreto: ventajas, uso y respuesta del personal de obra.',
+      'El Ing. Gabriel Calderón Vivar, miembro de Gacalvi, participo como expositor de la conferencia “Reinventando la construcción de las edificaciones”, organizada por la revista CONSTRUCTIVO y ExpoCONSTRUCTIVO. La participación del ingeniero Calderón giró en torno a los bloques de concreto: ventajas, uso y respuesta del personal de obra.\n'+'\n' +
+        'Diversas son las ventajas que tiene el uso de bloques de concreto, de las cuales hemos decidido resaltar las dos más significativas para la empresa.\n' +
+        '\n' +
+        '•\tEntre las ventajas del uso de bloques de concreto se evidencian: un mayor avance en un menor tiempo, fácil y práctico manejo en obra, como también, variedad de medidas.\n' +'\n' +
+        '•\tLa renuencia del personal frente a nuevos sistemas constructivos debe ser un tema que las personas involucradas en el rubro de la construcción han de tomar en cuenta, pues aún existe un miedo a enfrentar los cambios. Se debe empezar por forjar la confianza en otras técnicas que escapan de lo convencional.',
   },
   {
     id: 'bloques-concreto',
@@ -108,9 +112,17 @@ export const MENTIONS: readonly MentionCard[] = [
     alt: 'Bloques de concreto para tu obra',
     title: '¿Por qué elegir bloques de concreto para tu obra?',
     category: 'Artículo',
-    date: '2026',
+    date: '',
     description: 'El Ing. Gabriel Calderón Vivar, nos instruye sobre el uso de bloques de concreto. A lo largo de la entrevista brindada a la revista Constructivo en su edición número 146 nos comenta cuáles son las mayores ventajas de utilizar bloques de concreto en un proyecto inmobiliario.',
-    fullText: 'Texto completo de la noticia — pendiente por definir.',
+    fullText:
+        'El Ing. Gabriel Calderón Vivar, nos instruye sobre el uso de bloques de concreto. A lo largo de la entrevista brindada a la revista Constructivo en su edición número 146 nos comenta cuáles son las mayores ventajas de utilizar bloques de concreto en un proyecto inmobiliario.\n'+'\n'+
+        'MASSA DUN DUN\n' +
+        '«Massa Dun Dun es un innovador producto que viene revolucionando la manera de construir. Fuerte, resistente y práctica, esta mezcla de polímeros para el asentado de ladrillo rinde hasta veinte veces más que el mortero convencional.»\n' +
+        '\n' +
+        '•\tProducto Sustentable\n' +
+        '•\tMayor productividad\n' +
+        '•\tElimina variaciones en el mortero tradicional\n' +
+        '•\tProducto sustentable',
   },
   {
     id: 'massa-dun-dun',
@@ -118,9 +130,17 @@ export const MENTIONS: readonly MentionCard[] = [
     alt: 'Massa Dun Dun: bloques de concreto',
     title: 'Massa Dun Dun: Resistente, eficiente y rentable en toda obra.',
     category: 'Producto',
-    date: '2026',
+    date: '',
     description: 'El Ing. Gabriel Calderón Vivar, miembro de Gacalvi, tuvo una pequeña entrevista para la nueva edición de constructivo. En esta oportunidad, comentó sobre las ventajas de uno de los productos que venimos implementando y sus beneficios en obra.',
-    fullText: 'Texto completo de la noticia — pendiente por definir.',
+    fullText:
+        'El Ing. Gabriel Calderón Vivar, miembro de Gacalvi, tuvo una pequeña entrevista para la nueva edición de constructivo. En esta oportunidad, comentó sobre las ventajas de uno de los productos que venimos implementando y sus beneficios en obra.\n'+'\n'+
+        'BLOQUES DE CONCRETO\n' +
+        'Son elementos premoldeados de medidas uniformes y resistentes, fabricados para la construcción de muro y tabiques. Han sido producidos a partir de un sistema de tecnología avanzada para garantizar su competitividad y calidad. Son ideales para mampostería, viviendas, diversidad de muros perimetrales, industriales, entre otros.\n' +
+        '\n' +
+        '•\tVersátil\n' +
+        '•\tResistente\n' +
+        '•\tEconomizador de tiempo y recursos\n' +
+        '•\tPráctico',
   },
 ]
 
