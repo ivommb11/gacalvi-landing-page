@@ -51,7 +51,7 @@ export function Testimonios() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.3 }}
         transition={{ duration: 0.5, ease: 'easeOut' }}
-        className="relative z-10 mx-auto flex w-full max-w-[1700px] flex-1 flex-col px-6 pb-[88px] pt-[98px]"
+        className="relative z-10 mx-auto flex w-full max-w-[1700px] flex-1 flex-col justify-center px-6 pb-[88px] pt-[98px]"
       >
         <SectionHeading title="Testimonios" onDark />
 
