@@ -1,10 +1,13 @@
+import { useState } from 'react'
 import { NAV_ITEMS, SECTION_IDS } from '../../lib/site'
 import { useActiveSection } from '../../hooks/useActiveSection'
 {/*import { IconLogoMark bg-cloud} from '../icons'*/}
 import gacalviLogo from '../../assets/photos/logo.png'
 
 export function Sidebar() {
-  const active = useActiveSection(SECTION_IDS)
+  const observerActive = useActiveSection(SECTION_IDS)
+  const [override, setOverride] = useState<string | null>(null)
+  const active = override ?? observerActive
 
   return (
     <aside className="fixed inset-y-0 left-0 z-40 hidden w-[220px] flex-col bg-ebony lg:flex">
@@ -27,6 +30,7 @@ export function Sidebar() {
                 <a
                   href={item.href}
                   aria-current={isActive ? 'true' : undefined}
+                  onClick={() => setOverride(item.href.slice(1))}
                   className={`relative block py-[7px] text-10.5 font-semibold uppercase tracking-1.89 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cloud ${
                     isActive ? 'text-white' : 'text-white-45'
                   }`}
