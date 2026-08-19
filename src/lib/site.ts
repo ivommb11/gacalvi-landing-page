@@ -43,7 +43,7 @@ export const CONTACT_INFO = {
 } as const
 
 const INSTAGRAM_BASE = 'https://www.instagram.com/'
-
+const FACEBOOK_BASE = 'https://www.facebook.com/'
 export const SOCIAL_HANDLES: readonly { handle: string; href: string }[] = [
   { handle: 'studiodesign.gacalvi', href: `${INSTAGRAM_BASE}studiodesign.gacalvi` },
   { handle: 'trainingcenter.gacalvi', href: `${INSTAGRAM_BASE}trainingcenter.gacalvi` },
@@ -51,9 +51,9 @@ export const SOCIAL_HANDLES: readonly { handle: string; href: string }[] = [
 ]
 
 export const SOCIAL_BRANDS: readonly { name: string; href: string }[] = [
-  { name: 'Constructora Gacalvi', href: `${INSTAGRAM_BASE}constructora.gacalvi` },
-  { name: 'Gacalvi Studio Design', href: `${INSTAGRAM_BASE}studiodesign.gacalvi` },
-  { name: 'Gacalvi Training Center', href: `${INSTAGRAM_BASE}trainingcenter.gacalvi` },
+  { name: 'Constructora Gacalvi', href: `${FACEBOOK_BASE}profile.php?id=100063643509708` },
+  { name: 'Gacalvi Studio Design', href: `${FACEBOOK_BASE}profile.php?id=100077465508259` },
+  { name: 'Gacalvi Training Center', href: `${FACEBOOK_BASE}trainingcenter.gacalvi` },
 ]
 
 export const TESTIMONIALS: readonly Testimonial[] = [
