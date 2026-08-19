@@ -108,7 +108,7 @@ export function Menciones() {
                       variants={imageVariants}
                       transition={{ layout: layoutSpring, scale: { duration: 0.3, ease: 'easeOut' } }}
                       layoutId={`mention-image-${card.id}`}
-                      className="aspect-[269/365] w-full object-cover"
+                      className="aspect-[269/365] w-full object-contain"
                       loading="lazy"
                     />
                   </div>
