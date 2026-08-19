@@ -77,7 +77,7 @@ export function Menciones() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
-            className="mx-auto mt-[42px] grid max-w-[1320px] grid-cols-1 gap-x-[96px] gap-y-[56px] md:grid-cols-3"
+            className="mx-auto mt-[100px] grid max-w-[1320px] grid-cols-1 gap-x-[96px] gap-y-[56px] md:grid-cols-3"
           >
             {MENTIONS.map((card) => {
               const open = selected?.id === card.id
@@ -113,14 +113,14 @@ export function Menciones() {
                     />
                   </div>
                   <div className="border-t-3 border-cloud pt-[26px]">
-                    <h3 className="text-11.5 font-extrabold uppercase leading-[15.81px] tracking-1.38 text-mineshaft">
+                    <h3 className="text-15 font-extrabold uppercase leading-[15.81px] tracking-1.38 text-mineshaft">
                       {card.title}
                     </h3>
-                    {card.description && (
+                    {/*{card.description && (
                       <p className="mt-[18px] text-13.5 font-regular text-emperor">
                         {card.description}
                       </p>
-                    )}
+                    )}*/}
                   </div>
                 </motion.article>
               )
