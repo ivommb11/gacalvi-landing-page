@@ -95,7 +95,7 @@ export const MENTIONS: readonly MentionCard[] = [
     src: mencion1,
     alt: 'Edificio moderno premiado',
     title: 'Reinventado la construcción de las edificaciones',
-    category: 'Evento',
+    category: 'Conferencia Online',
     date: '',
     description:
       '',
@@ -129,7 +129,7 @@ export const MENTIONS: readonly MentionCard[] = [
     src: mencion3,
     alt: 'Massa Dun Dun: bloques de concreto',
     title: 'Massa Dun Dun: Resistente, eficiente y rentable en toda obra.',
-    category: 'Producto',
+    category: 'Entrevista',
     date: '',
     description: 'El Ing. Gabriel Calderón Vivar, miembro de Gacalvi, tuvo una pequeña entrevista para la nueva edición de constructivo. En esta oportunidad, comentó sobre las ventajas de uno de los productos que venimos implementando y sus beneficios en obra.',
     fullText:
