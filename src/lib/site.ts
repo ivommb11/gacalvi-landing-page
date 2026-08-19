@@ -23,6 +23,7 @@ export const NAV_ITEMS: readonly NavItem[] = [
   { label: 'Servicios', href: '#servicios' },
   { label: 'Menciones', href: '#menciones' },
   { label: 'Testimonios', href: '#testimonios' },
+  { label: 'Contacto', href: '#contacto' },
 ]
 
 export const FOOTER_NAV: readonly NavItem[] = [
@@ -31,7 +32,6 @@ export const FOOTER_NAV: readonly NavItem[] = [
   { label: 'Servicios', href: '#servicios' },
   { label: 'Menciones', href: '#menciones' },
   { label: 'Testimonios', href: '#testimonios' },
-  { label: 'Contacto', href: '#contacto' },
 ]
 
 export const CONTACT_INFO = {
