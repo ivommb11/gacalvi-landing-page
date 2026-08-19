@@ -17,6 +17,10 @@ export function Hero() {
   const y = useTransform(scrollYProgress, [0, 0.5], ['0%', '-60%'])
   const opacity = useTransform(scrollYProgress, [0, 0.4], [1, 0])
 
+  const phoneNumber = '51941439233';
+  const message = 'Hola, me gustaría más información sobre sus servicios';
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
   return (
     <section ref={sectionRef} id="inicio" className="relative h-[200vh]">
       <div className="sticky top-0 isolate flex h-svh items-center justify-center overflow-hidden bg-ebony">
@@ -55,8 +59,8 @@ export function Hero() {
             Sé parte de nuestra historia
           </p>
 
-          <Button href="#menciones" className="mt-[46px] lg:mt-[58px]">
-            Ver Proyectos
+          <Button href={whatsappUrl} className="mt-[46px] lg:mt-[58px]">
+            Contáctanos
             <IconArrowRight width={19} height={19} />
           </Button>
         </motion.div>

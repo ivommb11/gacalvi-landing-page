@@ -192,7 +192,7 @@ export function Menciones() {
                   {selected.title}
                 </h2>
                 <div className="mt-[18px] border-t-3 border-cloud" />
-                <p className="mt-[18px] text-13.5 font-regular text-emperor">
+                <p className="mt-[18px] text-50 font-regular text-emperor">
                   {selected.fullText ?? selected.description}
                 </p>
               </motion.div>
