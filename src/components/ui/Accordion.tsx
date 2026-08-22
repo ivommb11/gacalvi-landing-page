@@ -3,6 +3,7 @@ import { AnimatePresence, motion, type Variants } from 'motion/react'
 
 import type { ServiceAccordionItem } from '../../types'
 import { IconChevronDown } from '../icons'
+import { Button } from './Button'
 
 interface AccordionProps {
   items: readonly ServiceAccordionItem[]
@@ -20,9 +21,11 @@ const itemVariants: Variants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
 }
 
-function LogoSlot({ logo, title }: { logo?: string; title: string }) {
+function LogoSlot({ logo, title, link }: { logo?: string; title: string; link?: string }) {
   if (logo) {
-    return <img src={logo} alt={title} className="size-[300px] shrink-0 object-contain sm:size-[clamp(140px,35%,300px)]" />
+    const img = <img src={logo} alt={title} className="size-[300px] shrink-0 object-contain sm:size-[clamp(140px,35%,300px)]" />
+    if (link) return <a href={link} target="_blank" rel="noopener noreferrer" className="contents">{img}</a>
+    return img
   }
   return (
     <span className="flex size-[88px] shrink-0 items-center justify-center rounded-2 border border-cloud-16 bg-white-8 text-12.5 font-bold uppercase tracking-1.9 text-cloud">
@@ -88,12 +91,24 @@ export function Accordion({ items, className, animateInView = false }: Accordion
                   className="overflow-hidden"
                 >
                   <div className="flex flex-col gap-[28px] py-[36px] sm:flex-row sm:items-center">
-                    <LogoSlot logo={item.logo} title={item.title} />
-                    {item.description && (
-                      <p className="max-w-[480px] text-15.5 font-regular text-alto">
-                        {item.description}
-                      </p>
-                    )}
+                    <LogoSlot logo={item.logo} title={item.title} link={item.link} />
+                    <div className="flex flex-col">
+                      {item.description && (
+                        <p className="max-w-[480px] text-20 font-regular text-alto">
+                          {item.description}
+                        </p>
+                      )}
+                      {item.link && (
+                        <Button
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-[20px] self-start px-[10px] py-[10px] text-[9px] tracking-[1px]"
+                        >
+                          Conoce Más
+                        </Button>
+                      )}
+                    </div>
                   </div>
                 </motion.div>
               )}

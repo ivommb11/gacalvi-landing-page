@@ -163,6 +163,7 @@ export const SERVICES: readonly ServiceAccordionItem[] = [
     logo: trainingCenterLogo,
     description:
       'Capacitaciones constantes para futuros representantes del rubro arquitectónico y de la ingeniería.',
+    link: 'https://trainingcenter.gacalvi.com',
   },
   {
     id: 'studio-design',
