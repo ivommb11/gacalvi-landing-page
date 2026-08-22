@@ -30,4 +30,5 @@ export interface ServiceAccordionItem {
   title: string
   logo?: string
   description?: string
+  link?: string
 }
