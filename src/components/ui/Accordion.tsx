@@ -103,7 +103,8 @@ export function Accordion({ items, className, animateInView = false }: Accordion
                           href={item.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="mt-[20px] self-start px-[10px] py-[10px] text-[9px] tracking-[1px]"
+                          size="small"
+                          className="mt-[28px] self-start"
                         >
                           Conoce Más
                         </Button>
