@@ -46,7 +46,7 @@ export function Hero() {
         >
           <p className="flex items-center justify-center gap-[28px] text-[15.5px] font-semibold uppercase leading-[23px] tracking-[4.96px] text-white-50 lg:gap-[48px]">
             <span aria-hidden className="block h-px w-[38px] bg-cloud-37" />
-            <span>Arquitectura · Ingeniería · Diseño</span>
+            <span>Arquitectura · Ingeniería · Capacitación</span>
             <span aria-hidden className="block h-px w-[38px] bg-cloud-37" />
           </p>
 
