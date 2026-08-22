@@ -3,6 +3,7 @@ import { AnimatePresence, motion, type Variants } from 'motion/react'
 
 import type { ServiceAccordionItem } from '../../types'
 import { IconChevronDown } from '../icons'
+import { Button } from './Button'
 
 interface AccordionProps {
   items: readonly ServiceAccordionItem[]
@@ -91,11 +92,23 @@ export function Accordion({ items, className, animateInView = false }: Accordion
                 >
                   <div className="flex flex-col gap-[28px] py-[36px] sm:flex-row sm:items-center">
                     <LogoSlot logo={item.logo} title={item.title} link={item.link} />
-                    {item.description && (
-                      <p className="max-w-[480px] text-15.5 font-regular text-alto">
-                        {item.description}
-                      </p>
-                    )}
+                    <div className="flex flex-col">
+                      {item.description && (
+                        <p className="max-w-[480px] text-20 font-regular text-alto">
+                          {item.description}
+                        </p>
+                      )}
+                      {item.link && (
+                        <Button
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="mt-[20px] self-start px-[10px] py-[10px] text-[9px] tracking-[1px]"
+                        >
+                          Conoce Más
+                        </Button>
+                      )}
+                    </div>
                   </div>
                 </motion.div>
               )}
