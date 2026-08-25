@@ -50,7 +50,7 @@ export function Sidebar() {
         <p className="text-9 font-regular uppercase tracking-1.98 text-white-20">
           <span className="block">Arquitectura</span>
           <span className="block">Ingeniería</span>
-          <span className="block">Diseño</span>
+          <span className="block">Capacitación</span>
         </p>
       </div>
     </aside>
