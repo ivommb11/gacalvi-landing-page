@@ -146,7 +146,7 @@ export function ConsultasModal({ open, onClose }: ConsultasModalProps) {
               </div>
               <div className="flex flex-col gap-[6px]">
                 <label htmlFor="consultas-phone" className={labelClass}>Número de teléfono</label>
-                <input id="consultas-phone" type="tel" name="phone" required placeholder="Ej: +51 941 439 233" className={inputClass} />
+                <input id="consultas-phone" type="tel" name="phone" required placeholder="Ej: +51 941 439 235" className={inputClass} />
               </div>
               <div className="flex flex-col gap-[6px]">
                 <label htmlFor="consultas-email" className={labelClass}>Correo electrónico</label>
