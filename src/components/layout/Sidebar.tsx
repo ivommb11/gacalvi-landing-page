@@ -53,7 +53,7 @@ export function Sidebar() {
         <button
           type="button"
           onClick={() => setConsultasOpen(true)}
-          className="mb-[16px] w-full rounded-2 bg-cloud py-[10px] text-10.5 font-semibold uppercase tracking-1.89 text-ebony shadow-button focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cloud"
+          className="mb-[16px] w-full rounded-2 bg-cloud py-[10px] text-10.5 font-semibold uppercase tracking-1.89 text-ebony shadow-button transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cloud"
         >
           Consultas
         </button>
