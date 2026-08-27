@@ -49,22 +49,21 @@ export function Sidebar() {
         </ul>
       </nav>
 
-      <div className="px-[28px] pb-[16px]">
+      <div className="mt-auto px-[28px] pb-[26px]">
         <button
           type="button"
           onClick={() => setConsultasOpen(true)}
-          className="block w-full py-[7px] text-left text-10.5 font-semibold uppercase tracking-1.89 text-white-45 transition-colors hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cloud"
+          className="mb-[16px] w-full rounded-2 bg-cloud py-[10px] text-10.5 font-semibold uppercase tracking-1.89 text-ebony shadow-button focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cloud"
         >
           Consultas
         </button>
-      </div>
-
-      <div className="mt-auto border-t border-cloud-9 px-[28px] pb-[26px] pt-[34px]">
-        <p className="text-9 font-regular uppercase tracking-1.98 text-white-20">
-          <span className="block">Arquitectura</span>
-          <span className="block">Ingeniería</span>
-          <span className="block">Capacitación</span>
-        </p>
+        <div className="border-t border-cloud-9 pt-[34px]">
+          <p className="text-9 font-regular uppercase tracking-1.98 text-white-20">
+            <span className="block">Arquitectura</span>
+            <span className="block">Ingeniería</span>
+            <span className="block">Capacitación</span>
+          </p>
+        </div>
       </div>
     </aside>
 
