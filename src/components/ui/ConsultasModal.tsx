@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from 'motion/react'
 import { IconClose } from '../icons'
 
 // TODO: Reemplaza con tu Access Key de Web3Forms → https://web3forms.com
-const WEB3FORMS_ACCESS_KEY = 'TU_ACCESS_KEY_AQUI'
+const WEB3FORMS_ACCESS_KEY = 'd744f3f9-aad9-4b04-8fb4-97bade1502e3'
 
 interface ConsultasModalProps {
   open: boolean
@@ -70,7 +70,6 @@ export function ConsultasModal({ open, onClose }: ConsultasModalProps) {
     const form = event.currentTarget
     const formData = new FormData(form)
     formData.append('access_key', WEB3FORMS_ACCESS_KEY)
-    formData.append('to', 'contacto@gacalvi.com')
 
     try {
       const response = await fetch('https://api.web3forms.com/submit', {
