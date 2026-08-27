@@ -42,7 +42,7 @@ export function Hero() {
 
         <motion.div
           style={{ y, opacity }}
-          className="relative z-10 mx-auto flex w-full max-w-[1700px] flex-col items-center px-6 text-center"
+          className="relative z-10 mx-auto flex max-w-[1700px] flex-col items-center px-6 text-center"
         >
           <p className="flex items-center justify-center gap-[28px] text-[15.5px] font-semibold uppercase leading-[23px] tracking-[4.96px] text-white-50 lg:gap-[48px]">
             <span aria-hidden className="block h-px w-[38px] bg-cloud-37" />
