@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import {
   motion,
   useReducedMotion,
@@ -34,6 +34,19 @@ export function Footer() {
   const shouldReduceMotion = useReducedMotion()
   const footerRef = useRef<HTMLElement>(null)
 
+  const [isDesktop, setIsDesktop] = useState(() =>
+    typeof window === 'undefined'
+      ? true
+      : window.matchMedia('(min-width: 1024px)').matches,
+  )
+
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 1024px)')
+    const handler = (e: MediaQueryListEvent) => setIsDesktop(e.matches)
+    mq.addEventListener('change', handler)
+    return () => mq.removeEventListener('change', handler)
+  }, [])
+
   const { scrollYProgress } = useScroll({
     target: footerRef,
     offset: ['start end', 'end end'],
@@ -46,7 +59,7 @@ export function Footer() {
     <motion.footer
       ref={footerRef}
       id="contacto"
-      style={shouldReduceMotion ? undefined : { y, opacity }}
+      style={shouldReduceMotion || !isDesktop ? undefined : { y, opacity }}
       className="relative bg-ebony"
     >
       <div className="mx-auto w-full max-w-[1700px] px-6 pt-[80px] xl:pl-[145px]">
