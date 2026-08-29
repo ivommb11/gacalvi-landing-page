@@ -69,7 +69,7 @@ export function Menciones() {
   return (
     <>
       <section id="menciones" className="flex min-h-svh flex-col bg-white">
-        <div className="mx-auto flex w-full max-w-[1700px] flex-1 flex-col px-6 pb-[88px] pt-[82px] lg:px-[16px]">
+        <div className="mx-auto flex w-full lg:max-w-[var(--band)] flex-1 flex-col px-6 pb-[clamp(56px,calc(var(--band)*0.0517647059),121.44px)] pt-[clamp(52px,calc(var(--band)*0.0482352941),113.16px)] lg:px-[clamp(10px,calc(var(--band)*0.0094117647),22.08px)]">
           <SectionHeading title="Menciones" />
 
           <motion.div
@@ -77,7 +77,7 @@ export function Menciones() {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
-            className="mx-auto mt-[100px] grid max-w-[1320px] grid-cols-1 gap-x-[96px] gap-y-[56px] md:grid-cols-3"
+            className="mx-auto mt-[clamp(64px,calc(var(--band)*0.0588235294),138px)] grid max-w-[clamp(860px,calc(var(--band)*0.7764705882),1821.6px)] grid-cols-1 gap-x-[clamp(62px,calc(var(--band)*0.0564705882),132.48px)] gap-y-[clamp(36px,calc(var(--band)*0.0329411765),77.28px)] md:grid-cols-3"
           >
             {MENTIONS.map((card) => {
               const open = selected?.id === card.id
@@ -112,8 +112,8 @@ export function Menciones() {
                       loading="lazy"
                     />
                   </div>
-                  <div className="border-t-3 border-cloud pt-[26px]">
-                    <h3 className="text-15 font-extrabold uppercase leading-[15.81px] tracking-1.38 text-mineshaft">
+                  <div className="border-t-3 border-cloud pt-[clamp(16px,calc(var(--band)*0.0152941176),35.88px)]">
+                    <h3 className="text-[clamp(10px,calc(var(--band)*0.0088235294),20.7px)] font-extrabold uppercase leading-[clamp(10px,calc(var(--band)*0.0093),21.82px)] tracking-[clamp(0.9px,calc(var(--band)*0.0008117647),1.9px)] text-mineshaft">
                       {card.title}
                     </h3>
                     {/*{card.description && (
@@ -133,7 +133,7 @@ export function Menciones() {
         {selected && (
           <motion.div
             key={`mention-detail-${selected.id}`}
-            className="fixed inset-0 z-[60] flex items-center justify-center p-6"
+            className="fixed inset-0 z-[60] flex items-center justify-center p-[clamp(16px,calc(var(--band)*0.0141176471),33.12px)]"
             role="dialog"
             aria-modal="true"
             aria-label={selected.title}
@@ -152,18 +152,18 @@ export function Menciones() {
               tabIndex={-1}
               layoutId={`mention-card-${selected.id}`}
               transition={{ layout: layoutSpring }}
-              className="relative flex max-h-[88vh] w-full flex-col overflow-hidden bg-white shadow-fab outline-none md:h-[80vh] md:max-w-[1100px] md:flex-row"
+              className="relative flex max-h-[88vh] w-full flex-col overflow-hidden bg-white shadow-fab outline-none md:h-[80vh] md:max-w-[clamp(720px,calc(var(--band)*0.6470588235),1517.8px)] md:flex-row"
             >
               <button
                 type="button"
                 onClick={() => setSelected(null)}
                 aria-label="Cerrar"
-                className="absolute right-[16px] top-[16px] flex size-[36px] items-center justify-center rounded-99 bg-ebony-39"
+                className="absolute right-[clamp(10px,calc(var(--band)*0.0094117647),22.08px)] top-[clamp(10px,calc(var(--band)*0.0094117647),22.08px)] flex size-[clamp(24px,calc(var(--band)*0.0211764706),49.68px)] items-center justify-center rounded-99 bg-ebony-39"
               >
                 <IconClose width={14} height={14} />
               </button>
 
-              <div className="h-[280px] w-full shrink-0 bg-white py-6 md:h-auto md:w-[46%] md:self-stretch md:pl-6 lg:pl-[40px]">
+              <div className="h-[clamp(180px,calc(var(--band)*0.1647058824),386.4px)] w-full shrink-0 bg-white py-[clamp(16px,calc(var(--band)*0.0141176471),33.12px)] md:h-auto md:w-[46%] md:self-stretch md:pl-[clamp(16px,calc(var(--band)*0.0141176471),33.12px)] lg:pl-[clamp(26px,calc(var(--band)*0.0235294118),55.2px)]">
                 <motion.img
                   src={selected.src}
                   alt={selected.alt}
@@ -181,18 +181,18 @@ export function Menciones() {
                   transition: { delay: 0.25, duration: 0.3, ease: 'easeOut' },
                 }}
                 exit={{ opacity: 0, transition: { duration: 0.15 } }}
-                className="min-h-0 flex-1 overflow-y-auto px-6 pb-[40px] pt-[28px] lg:px-[40px]"
+                className="min-h-0 flex-1 overflow-y-auto px-[clamp(16px,calc(var(--band)*0.0141176471),33.12px)] pb-[clamp(26px,calc(var(--band)*0.0235294118),55.2px)] pt-[clamp(18px,calc(var(--band)*0.0164705882),38.64px)] lg:px-[clamp(26px,calc(var(--band)*0.0235294118),55.2px)]"
               >
                 {(selected.category || selected.date) && (
-                  <p className="text-11 font-bold uppercase tracking-1.89 text-cloud">
+                  <p className="text-[clamp(7px,calc(var(--band)*0.0064705882),15.18px)] font-bold uppercase tracking-[clamp(1.27px,calc(var(--band)*0.0011117647),2.606px)] text-cloud">
                     {[selected.category, selected.date].filter(Boolean).join(' · ')}
                   </p>
                 )}
-                <h2 className="mt-[14px] text-22 font-extrabold tracking-0.48 text-mineshaft">
+                <h2 className="mt-[clamp(9px,calc(var(--band)*0.0082352941),19.32px)] text-[clamp(14px,calc(var(--band)*0.0129411765),30.36px)] font-extrabold tracking-[clamp(0.32px,calc(var(--band)*0.0002823529),0.662px)] text-mineshaft">
                   {selected.title}
                 </h2>
-                <div className="mt-[18px] border-t-3 border-cloud" />
-                <p className="mt-[18px] whitespace-pre-line text-50 font-regular text-emperor">
+                <div className="mt-[clamp(12px,calc(var(--band)*0.0105882353),24.84px)] border-t-3 border-cloud" />
+                <p className="mt-[clamp(12px,calc(var(--band)*0.0105882353),24.84px)] whitespace-pre-line text-[clamp(11px,calc(var(--band)*0.0088235294),20.7px] font-regular text-emperor">
                   {selected.fullText ?? selected.description}
                 </p>
               </motion.div>

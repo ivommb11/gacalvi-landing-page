@@ -6,6 +6,7 @@ import { Servicios } from './components/sections/Servicios'
 import { Menciones } from './components/sections/Menciones'
 import { Testimonios } from './components/sections/Testimonios'
 import { Footer } from './components/sections/Footer'
+import { ScrollToTop } from './components/ui/ScrollToTop'
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
         <Testimonios />
         <Footer />
       </main>
+      <ScrollToTop />
     </div>
   )
 }

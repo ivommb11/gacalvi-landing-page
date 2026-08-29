@@ -3,13 +3,16 @@ import { NAV_ITEMS, SECTION_IDS } from '../../lib/site'
 import { useActiveSection } from '../../hooks/useActiveSection'
 {/*import { IconLogoMark bg-cloud} from '../icons'*/}
 import gacalviLogo from '../../assets/photos/logo.png'
+import { ConsultasModal } from '../ui/ConsultasModal'
 
 export function Sidebar() {
   const observerActive = useActiveSection(SECTION_IDS)
   const [override, setOverride] = useState<string | null>(null)
+  const [consultasOpen, setConsultasOpen] = useState(false)
   const active = override ?? observerActive
 
   return (
+    <>
     <aside className="fixed inset-y-0 left-0 z-40 hidden w-[220px] flex-col bg-ebony lg:flex">
       <div className="border-b border-cloud-9 px-[28px] pb-[19px] pt-[40px]">
         <span className="flex size-[80px] items-center justify-center rounded-2">
@@ -46,13 +49,25 @@ export function Sidebar() {
         </ul>
       </nav>
 
-      <div className="mt-auto border-t border-cloud-9 px-[28px] pb-[26px] pt-[34px]">
-        <p className="text-9 font-regular uppercase tracking-1.98 text-white-20">
-          <span className="block">Arquitectura</span>
-          <span className="block">Ingeniería</span>
-          <span className="block">Diseño</span>
-        </p>
+      <div className="mt-auto px-[28px] pb-[26px]">
+        <button
+          type="button"
+          onClick={() => setConsultasOpen(true)}
+          className="mb-[16px] w-full rounded-2 bg-cloud py-[10px] text-10.5 font-semibold uppercase tracking-1.89 text-ebony shadow-button transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cloud"
+        >
+          Consultas
+        </button>
+        <div className="border-t border-cloud-9 pt-[34px]">
+          <p className="text-9 font-regular uppercase tracking-1.98 text-white-20">
+            <span className="block">Arquitectura</span>
+            <span className="block">Ingeniería</span>
+            <span className="block">Capacitación</span>
+          </p>
+        </div>
       </div>
     </aside>
+
+    <ConsultasModal open={consultasOpen} onClose={() => setConsultasOpen(false)} />
+    </>
   )
 }

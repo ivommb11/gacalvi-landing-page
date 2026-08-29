@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import {
   motion,
   useReducedMotion,
@@ -12,7 +12,6 @@ import {
   SOCIAL_HANDLES,
 } from '../../lib/site'
 import {
-  IconArrowUp,
   IconInstagram,
   IconInstagramBox,
   IconMail,
@@ -26,13 +25,22 @@ const columnDivider = 'mt-[4px] block h-px w-[34px] bg-white-7'
 const linkClass =
   'inline-flex items-center text-12 font-regular tracking-0.48 text-white-38 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cloud'
 
-function scrollToTop() {
-  window.scrollTo({ top: 0 })
-}
-
 export function Footer() {
   const shouldReduceMotion = useReducedMotion()
   const footerRef = useRef<HTMLElement>(null)
+
+  const [isDesktop, setIsDesktop] = useState(() =>
+    typeof window === 'undefined'
+      ? true
+      : window.matchMedia('(min-width: 1024px)').matches,
+  )
+
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 1024px)')
+    const handler = (e: MediaQueryListEvent) => setIsDesktop(e.matches)
+    mq.addEventListener('change', handler)
+    return () => mq.removeEventListener('change', handler)
+  }, [])
 
   const { scrollYProgress } = useScroll({
     target: footerRef,
@@ -46,7 +54,7 @@ export function Footer() {
     <motion.footer
       ref={footerRef}
       id="contacto"
-      style={shouldReduceMotion ? undefined : { y, opacity }}
+      style={shouldReduceMotion || !isDesktop ? undefined : { y, opacity }}
       className="relative bg-ebony"
     >
       <div className="mx-auto w-full max-w-[1700px] px-6 pt-[80px] xl:pl-[145px]">
@@ -149,15 +157,6 @@ export function Footer() {
           © 2026 Corporación GACALVI. Todos los derechos reservados.
         </p>
       </div>
-
-      <button
-        type="button"
-        aria-label="Volver al inicio"
-        onClick={scrollToTop}
-        className="absolute bottom-[74px] right-[22px] flex size-[48px] items-center justify-center rounded-24 bg-cloud text-ebony shadow-fab focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cloud"
-      >
-        <IconArrowUp />
-      </button>
     </motion.footer>
   )
 }

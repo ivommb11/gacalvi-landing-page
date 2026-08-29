@@ -23,7 +23,6 @@ export const NAV_ITEMS: readonly NavItem[] = [
   { label: 'Servicios', href: '#servicios' },
   { label: 'Menciones', href: '#menciones' },
   { label: 'Testimonios', href: '#testimonios' },
-  { label: 'Contacto', href: '#contacto' },
 ]
 
 export const FOOTER_NAV: readonly NavItem[] = [
@@ -116,7 +115,7 @@ export const MENTIONS: readonly MentionCard[] = [
     description: 'El Ing. Gabriel Calderón Vivar, nos instruye sobre el uso de bloques de concreto. A lo largo de la entrevista brindada a la revista Constructivo en su edición número 146 nos comenta cuáles son las mayores ventajas de utilizar bloques de concreto en un proyecto inmobiliario.',
     fullText:
         'El Ing. Gabriel Calderón Vivar, nos instruye sobre el uso de bloques de concreto. A lo largo de la entrevista brindada a la revista Constructivo en su edición número 146 nos comenta cuáles son las mayores ventajas de utilizar bloques de concreto en un proyecto inmobiliario.\n'+'\n'+
-        'MASSA DUN DUN\n' +
+        'MASSA DUN DUN:\n' +
         '«Massa Dun Dun es un innovador producto que viene revolucionando la manera de construir. Fuerte, resistente y práctica, esta mezcla de polímeros para el asentado de ladrillo rinde hasta veinte veces más que el mortero convencional.»\n' +
         '\n' +
         '•\tProducto Sustentable\n' +
@@ -134,7 +133,7 @@ export const MENTIONS: readonly MentionCard[] = [
     description: 'El Ing. Gabriel Calderón Vivar, miembro de Gacalvi, tuvo una pequeña entrevista para la nueva edición de constructivo. En esta oportunidad, comentó sobre las ventajas de uno de los productos que venimos implementando y sus beneficios en obra.',
     fullText:
         'El Ing. Gabriel Calderón Vivar, miembro de Gacalvi, tuvo una pequeña entrevista para la nueva edición de constructivo. En esta oportunidad, comentó sobre las ventajas de uno de los productos que venimos implementando y sus beneficios en obra.\n'+'\n'+
-        'BLOQUES DE CONCRETO\n' +
+        'BLOQUES DE CONCRETO:\n' +
         'Son elementos premoldeados de medidas uniformes y resistentes, fabricados para la construcción de muro y tabiques. Han sido producidos a partir de un sistema de tecnología avanzada para garantizar su competitividad y calidad. Son ideales para mampostería, viviendas, diversidad de muros perimetrales, industriales, entre otros.\n' +
         '\n' +
         '•\tVersátil\n' +

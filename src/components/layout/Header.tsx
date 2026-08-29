@@ -4,9 +4,11 @@ import { FOOTER_NAV, SECTION_IDS } from '../../lib/site'
 import { useActiveSection } from '../../hooks/useActiveSection'
 import gacalviLogo from '../../assets/photos/logo.png'
 import { IconClose, IconMenu } from '../icons'
+import { ConsultasModal } from '../ui/ConsultasModal'
 
 export function Header() {
   const [open, setOpen] = useState(false)
+  const [consultasOpen, setConsultasOpen] = useState(false)
   const active = useActiveSection(SECTION_IDS)
 
   return (
@@ -59,8 +61,17 @@ export function Header() {
               )
             })}
           </ul>
+          <button
+            type="button"
+            onClick={() => { setOpen(false); setConsultasOpen(true) }}
+            className="mt-[16px] w-full rounded-2 bg-cloud py-[10px] text-12 font-semibold uppercase tracking-1.89 text-ebony shadow-button transition-transform hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cloud"
+          >
+            Consultas
+          </button>
         </nav>
       )}
+
+    <ConsultasModal open={consultasOpen} onClose={() => setConsultasOpen(false)} />
     </header>
   )
 }
