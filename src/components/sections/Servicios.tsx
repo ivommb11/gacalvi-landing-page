@@ -30,7 +30,7 @@ export function Servicios() {
               whileInView="visible"
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
-              className="mt-[clamp(62px,calc(var(--band)*0.0558823529),131.1px)] max-w-[clamp(282px,calc(var(--band)*0.2535294118),594.8px)] text-[clamp(9px,calc(var(--band)*0.0079411765),18.63px)] font-regular text-alto"
+              className="mt-[clamp(62px,calc(var(--band)*0.0558823529),131.1px)] max-w-[clamp(282px,calc(var(--band)*0.2535294118),594.8px)] text-16 font-regular text-alto sm:text-[clamp(9px,calc(var(--band)*0.0079411765),18.63px)]"
             >
               Somos una empresa comprometida con tu bienestar, tu economía y cada uno de tus proyectos.
               Por eso, nos hemos preocupado por ocupar cada área del rubro de la construcción:
@@ -46,7 +46,7 @@ export function Servicios() {
               whileInView="visible"
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.5, ease: 'easeOut', delay: 0.2 }}
-              className="mt-[clamp(56px,calc(var(--band)*0.0505882353),118.7px)] max-w-[clamp(291px,calc(var(--band)*0.2629411765),616.8px)] text-[clamp(10px,calc(var(--band)*0.0094117647),22.08px)] font-black text-white"
+              className="mt-[clamp(56px,calc(var(--band)*0.0505882353),118.7px)] max-w-[clamp(291px,calc(var(--band)*0.2629411765),616.8px)] text-18 font-black text-white sm:text-[clamp(10px,calc(var(--band)*0.0094117647),22.08px)]"
             >
               ¡Súmate a la experiencia Gacalvi!
             </motion.p>
