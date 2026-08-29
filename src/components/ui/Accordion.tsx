@@ -90,11 +90,11 @@ export function Accordion({ items, className, animateInView = false }: Accordion
                   }}
                   className="overflow-hidden"
                 >
-                  <div className="flex flex-col gap-[clamp(18px,calc(var(--band)*0.0164705882),38.64px)] py-[clamp(23px,calc(var(--band)*0.0211764706),49.68px)] sm:flex-row sm:items-center">
+                  <div className="flex flex-col items-center gap-[clamp(18px,calc(var(--band)*0.0164705882),38.64px)] py-[clamp(23px,calc(var(--band)*0.0211764706),49.68px)] sm:flex-row sm:items-center">
                     <LogoSlot logo={item.logo} title={item.title} link={item.link} />
-                    <div className="flex flex-col">
+                    <div className="flex flex-col items-center sm:items-start">
                       {item.description && (
-                        <p className="max-w-[clamp(310px,calc(var(--band)*0.2823529412),652.4px)] text-[clamp(13px,calc(var(--band)*0.0117647059),27.6px)] font-regular text-alto">
+                        <p className="mx-auto max-w-[clamp(310px,calc(var(--band)*0.2823529412),652.4px)] text-[clamp(13px,calc(var(--band)*0.0117647059),27.6px)] font-regular text-alto sm:mx-0 sm:text-left">
                           {item.description}
                         </p>
                       )}
@@ -104,7 +104,7 @@ export function Accordion({ items, className, animateInView = false }: Accordion
                           target="_blank"
                           rel="noopener noreferrer"
                           size="small"
-                          className="mt-[clamp(18px,calc(var(--band)*0.0164705882),38.64px)] self-start"
+                          className="mx-auto mt-[clamp(18px,calc(var(--band)*0.0164705882),38.64px)] sm:mx-0 sm:self-start"
                         >
                           Conoce Más
                         </Button>
