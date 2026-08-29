@@ -12,7 +12,6 @@ import {
   SOCIAL_HANDLES,
 } from '../../lib/site'
 import {
-  IconArrowUp,
   IconInstagram,
   IconInstagramBox,
   IconMail,
@@ -25,10 +24,6 @@ const columnHeading = 'text-9.5 font-bold uppercase tracking-1.9 text-cloud'
 const columnDivider = 'mt-[4px] block h-px w-[34px] bg-white-7'
 const linkClass =
   'inline-flex items-center text-12 font-regular tracking-0.48 text-white-38 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cloud'
-
-function scrollToTop() {
-  window.scrollTo({ top: 0 })
-}
 
 export function Footer() {
   const shouldReduceMotion = useReducedMotion()
@@ -162,15 +157,6 @@ export function Footer() {
           © 2026 Corporación GACALVI. Todos los derechos reservados.
         </p>
       </div>
-
-      <button
-        type="button"
-        aria-label="Volver al inicio"
-        onClick={scrollToTop}
-        className="absolute bottom-[74px] right-[22px] flex size-[48px] items-center justify-center rounded-24 bg-cloud text-ebony shadow-fab focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cloud"
-      >
-        <IconArrowUp />
-      </button>
     </motion.footer>
   )
 }
