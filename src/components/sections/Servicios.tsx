@@ -30,7 +30,7 @@ export function Servicios() {
               whileInView="visible"
               viewport={{ once: false, amount: 0.3 }}
               transition={{ duration: 0.5, ease: 'easeOut', delay: 0.1 }}
-              className="mt-[clamp(62px,calc(var(--band)*0.0558823529),131.1px)] w-full max-w-none text-16 font-regular text-alto sm:max-w-[clamp(282px,calc(var(--band)*0.2535294118),594.8px)] sm:text-[clamp(9px,calc(var(--band)*0.0079411765),18.63px)]"
+              className="mt-[clamp(62px,calc(var(--band)*0.0558823529),131.1px)] w-full max-w-none text-16 font-regular text-alto sm:max-w-[clamp(282px,calc(var(--band)*0.2535294118),594.8px)] sm:text-[clamp(9px,calc(var(--band)*0.01),23.08px)]"
             >
               Somos una empresa comprometida con tu bienestar, tu economía y cada uno de tus proyectos.
               Por eso, nos hemos preocupado por ocupar cada área del rubro de la construcción:
