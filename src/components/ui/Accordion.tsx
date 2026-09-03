@@ -94,7 +94,7 @@ export function Accordion({ items, className, animateInView = false }: Accordion
                     <LogoSlot logo={item.logo} title={item.title} link={item.link} />
                     <div className="flex flex-col items-center sm:items-start">
                       {item.description && (
-                        <p className="mx-auto max-w-[clamp(310px,calc(var(--band)*0.2823529412),652.4px)] text-[clamp(13px,calc(var(--band)*0.0117647059),27.6px)] font-regular text-alto sm:mx-0 sm:text-left">
+                        <p className="mx-auto max-w-[clamp(310px,calc(var(--band)*0.2823529412),652.4px)] text-16 font-regular text-alto sm:text-[clamp(9px,calc(var(--band)*0.0079411765),18.63px)] sm:mx-0 sm:text-left">
                           {item.description}
                         </p>
                       )}
